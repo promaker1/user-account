@@ -1,0 +1,27 @@
+[package]
+name = "emotion-user-account"
+version = "0.1.0"
+authors = ["Dmitry Khanevich <d@ndlabs.dev>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+no-entrypoint = []
+test-bpf = []
+
+[dependencies]
+solana-program = "1.9.14"
+spl-token = "3.3.0"
+spl-associated-token-account = "1.0.3"
+num-traits = "0.2.14"
+num-derive = "0.3.3"
+thiserror = "1.0.30"
+borsh = "0.9.3"
+
+[dev-dependencies]
+solana-program-test = "~1.10.10"
+solana-sdk = "~1.10.10"
+
+[lib]
+crate-type = ["cdylib", "lib"]

@@ -1,0 +1,52 @@
+{
+    "name": "user-account",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "start": "ts-node ./main.ts",
+        "create-account": "ts-node ./create_account.ts",
+        "deposit-account": "ts-node ./deposit_account.ts",
+        "withdraw-account": "ts-node ./withdraw_account.ts",
+        "transfer": "ts-node ./transfer.ts",
+        "block-account": "ts-node ./block_account.ts",
+        "unblock-account": "ts-node ./unblock_account.ts",
+        "start-with-test-validator": "start-server-and-test 'solana-test-validator --reset --quiet' http://localhost:8899/health start",
+        "lint": "eslint --ext .ts ./* && prettier --check \"./**/*.ts\"",
+        "lint:fix": "eslint --ext .ts ./* --fix && prettier --write \"./**/*.ts\"",
+        "pretty": "prettier --write '*.ts'"
+    },
+    "dependencies": {
+        "@solana/buffer-layout": "^4.0.0",
+        "@solana/buffer-layout-utils": "^0.2.0",
+        "@solana/spl-token": "^0.2.0",
+        "@solana/web3.js": "^1.33.0",
+        "bn.js": "^5.2.0",
+        "borsh": "^0.7.0",
+        "mz": "^2.7.0",
+        "yaml": "^1.10.2"
+    },
+    "devDependencies": {
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/bn.js": "^5.1.0",
+        "@types/eslint": "^8.2.2",
+        "@types/eslint-plugin-prettier": "^3.1.0",
+        "@types/mz": "^2.7.2",
+        "@types/prettier": "^2.1.5",
+        "@types/yaml": "^1.9.7",
+        "@typescript-eslint/eslint-plugin": "^4.6.0",
+        "@typescript-eslint/parser": "^4.6.0",
+        "eslint": "^7.12.1",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.1.2",
+        "start-server-and-test": "^1.11.6",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.0.5"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
